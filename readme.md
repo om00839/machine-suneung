@@ -1,11 +1,19 @@
 # 머신수능 프로젝트
 
+머신수능 프로젝트는 ‘BERT라면 수능도 풀 수 있지 않을까?’라는 아이디어에서 시작되어, 딥러닝 모델을 통해 수능 영어 빈칸 추론 문제를 푸는 프로젝트입니다. [Pre-Trained BERT](https://github.com/huggingface/transformers)와 SAN(Stochastic Answer Network)를 사용했고, 약 36%의 성능을 확인할 수 있었습니다. 
+
+## 프로젝트 소개 및 발표 자료
+
+- 링크: [버트야 수능풀자](./presentation/버트야 수능풀자.pdf)
+
 ## Requirements
 
 - transformers 2.1.1
 - pytorch 1.3.0
 
 ## Data
+
+> 데이터셋은 저작권관련 문제로 공개하기 어렵습니다.
 
 - 수능, 모의고사 영어 빈칸추론 문제
   - 모의고사
@@ -17,6 +25,12 @@
     - 2006~2019학년도
   - Train: 770개 (모의고사 문제)
   - Test: 95개 (수능 문제)
+
+## 코드
+
+BERT + SAN 모델 구현 및 학습, 성능 평가
+
+- san.ipynb
 
 ### 문제 예시
 
@@ -40,18 +54,4 @@ So far as you are wholly concentrated on bringing about a certain result, clearl
 - MTDNN: https://arxiv.org/abs/1901.11504
 - BERT: https://arxiv.org/abs/1810.04805
 - SAN: https://arxiv.org/abs/1712.03556
-
-## BERT
-
-#### 임베딩
-
-<img src='./image/embedding.png'></img>
-
-#### 모델 구조
-
-<img src='./image/model_architecture.png'></img>
-
-## SAN
-
-<img src='./image/san.png'></img>
 
